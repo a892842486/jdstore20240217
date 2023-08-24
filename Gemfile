@@ -45,6 +45,8 @@ group :development do
 end
 
   gem 'bootstrap-sass'
+  gem 'devise'
+  gem 'simple_form'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
