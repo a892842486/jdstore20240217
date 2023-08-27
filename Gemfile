@@ -48,6 +48,8 @@ end
   gem 'devise'
   gem 'simple_form'
   gem 'font-awesome-rails'
+  gem 'carrierwave' #上傳圖片功能
+  gem 'mini_magick' #上傳圖片功能
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
