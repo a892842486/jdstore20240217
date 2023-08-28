@@ -4,6 +4,9 @@ class Admin::ProductsController < ApplicationController
   before_action :admin_required     #必須有 admin 權限才能進入
   layout "admin" #建立後台分頁
 
+  def index
+    @products = Product.all
+  end
 
   def new
     @product = Product.new
