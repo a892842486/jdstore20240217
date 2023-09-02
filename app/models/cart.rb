@@ -19,5 +19,9 @@ class Cart < ApplicationRecord
     sum
   end
 
+  def clean! #一鍵清空購物車
+    cart_items.destroy_all
+  end
+
 
 end

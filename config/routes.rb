@@ -13,6 +13,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts
+  resources :carts do #一鍵清空購物車 功能
+    collection do
+      delete :clean
+    end
+  end
+
+  resources :cart_items #刪除 購物車內 某一商品
 
 end
