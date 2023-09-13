@@ -23,4 +23,8 @@ Rails.application.routes.draw do
   resources :cart_items #刪除 購物車內 某一商品
   resources :orders #建立結帳頁
 
+  namespace :account do
+    resources :orders
+  end
+
 end
