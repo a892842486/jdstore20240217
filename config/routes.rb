@@ -21,8 +21,12 @@ Rails.application.routes.draw do
   end
 
   resources :cart_items #刪除 購物車內 某一商品
-  resources :orders #建立結帳頁
-
+  resources :orders do #建立結帳頁
+    member do
+      post :pay_with_alipay
+      post :pay_with_wechat
+    end
+  end
   namespace :account do
     resources :orders
   end
