@@ -51,6 +51,7 @@ end
   gem 'carrierwave' #上傳圖片功能
   gem 'mini_magick' #上傳圖片功能
   gem 'letter_opener', group: :development #預覽信件功能
+  gem 'aasm' #aasm轉換貨品狀態功能
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
