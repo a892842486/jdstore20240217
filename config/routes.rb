@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #設定 admin/products 的路徑(routes)
   namespace :admin do
     resources :products
+    resources :orders
   end
 
   resources :products do
