@@ -14,6 +14,12 @@ class ApplicationController < ActionController::Base
     @current_cart ||= find_cart
   end
 
+  #搜尋欄功能
+  before_action :set_ransack_obj
+  def set_ransack_obj
+    @q = Product.ransack(params[:q])
+  end
+
   private
 
   def find_cart

@@ -11,6 +11,25 @@
               <li class="active">
                 <%= link_to("Products", products_path) %>
               </li>
+              
+              <!-- 搜尋欄 -->
+              <form class="navbar-form pull-left">
+                <%= search_form_for @q do |form| %>
+                <div class="input-group search-box">
+                  <div class="input-group-btn">
+                   <!-- 搜索功能 -->
+                   <%= form.search_field :title_cont, class:"form-control nr-sn-2", placeholder:"~~~" %>
+
+                   <!-- 提交按鈕 -->
+                   <button class="btn btn-default" type="submit">
+                     <span><i class="fa fa-search"></i></span>
+                   </button>
+
+                  </div>
+                </div>
+                <% end %>
+              </form>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <li>
@@ -25,7 +44,7 @@
                   <% else %>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                          Hi!, <%= current_user.email %>
+                          您好，用戶 <%= current_user.email %>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">

@@ -2,6 +2,9 @@ class ProductsController < ApplicationController
 
  def index
    @products = Product.all
+   #這兩行是搜尋欄功能
+   @q = Product.ransack(params[:q])
+   @products = @q.result(distinct: true)
  end
 
  def show
