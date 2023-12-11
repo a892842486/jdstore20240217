@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
+  #devise_for :users #碼起來，因為 users會重複定義(跳報錯)
+  devise_for :users, controllers: {
+     omniauth_callbacks: "users/omniauth_callbacks"
+   }
+
   root 'products#index'
 
   #設定 admin/products 的路徑(routes)

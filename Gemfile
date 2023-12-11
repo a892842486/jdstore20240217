@@ -56,6 +56,14 @@ end
   gem 'aasm' #aasm轉換貨品狀態功能
   gem 'ransack' #搜尋欄功能
 
+  #第三方登入
+  gem 'omniauth'
+  gem 'omniauth-google-oauth2'
+  gem 'omniauth-facebook'
+  gem 'omniauth-github'
+  gem 'omniauth-twitter'
+  gem 'figaro' #儲存密碼用
+  gem "omniauth-rails_csrf_protection"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -63,3 +71,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
 end
+
+gem "oauth2", "~> 1.4"
