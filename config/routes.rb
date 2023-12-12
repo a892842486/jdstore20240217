@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  #devise_for :users
-  #devise_for :users #碼起來，因為 users會重複定義(跳報錯)
-  devise_for :users, controllers: {
-     omniauth_callbacks: "users/omniauth_callbacks"
-   }
+  devise_for :users
+
 
   root 'products#index'
 
