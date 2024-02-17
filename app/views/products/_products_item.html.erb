@@ -1,0 +1,68 @@
+
+<!-- <div class="alert alert-info" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Test:</span>
+  我是一個測試用文字
+</div>
+<div class="alert alert-success" role="alert">
+  <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+  <span class="sr-only">Test:</span>
+  我是一個測試用文字
+</div>
+<div class="alert alert-info" role="alert">...</div>
+畫一條線 <hr>
+
+<i class="fa fa-4x fa fa-building"></i> -->
+
+<!-- 商品分類區 -->
+ <div class="btn-group" role="group">
+  <%= link_to products_path do  %>
+    <button type="button" class="btn btn-default">總覽</button>
+  <% end %>
+
+  <%= link_to kirby_products_path do  %>
+    <button type="button" class="btn btn-default">星之卡比</button>
+  <% end %>
+
+  <%= link_to monster_hunter_products_path do  %>
+    <button type="button" class="btn btn-default">魔物獵人</button>
+  <% end %>
+
+  <%= link_to super_smash_bros_products_path do  %>
+    <button type="button" class="btn btn-default">任天堂明星大亂鬥</button>
+  <% end %>
+
+  <%= link_to super_mario_products_path do  %>
+    <button type="button" class="btn btn-default">超級瑪利歐</button>
+  <% end %>
+
+  <%= link_to splatoon_products_path do  %>
+    <button type="button" class="btn btn-default">斯普拉遁</button>
+  <% end %>
+
+  <%= link_to zelda_botw_products_path do  %>
+    <button type="button" class="btn btn-default">薩爾達傳說</button>
+  <% end %>
+
+  <%= link_to animal_crossing_products_path do  %>
+    <button type="button" class="btn btn-default">動物森友會</button>
+  <% end %>
+</div>
+
+<br><br><br>
+
+<!-- 商品圖片 + 價格區 -->
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+      <% end %>
+      <%= product.title %> <%= product.price %> 元
+    </div>
+  <% end %>
+</div>

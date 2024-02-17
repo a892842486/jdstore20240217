@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default" role="navigation">
+<br><br><br>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -11,6 +12,25 @@
               <li class="active">
                 <%= link_to("Products", products_path) %>
               </li>
+
+              <!-- 搜尋欄 -->
+              <form class="navbar-form pull-left">
+                <%= search_form_for @q do |form| %>
+                <div class="input-group search-box">
+                  <div class="input-group-btn">
+                   <!-- 搜索功能 -->
+                   <%= form.search_field :title_cont, class:"form-control nr-sn-2", placeholder:"~~~" %>
+
+                   <!-- 提交按鈕 -->
+                   <button class="btn btn-default" type="submit">
+                     <span><i class="fa fa-search"></i></span>
+                   </button>
+
+                  </div>
+                </div>
+                <% end %>
+              </form>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <li>
@@ -20,18 +40,20 @@
                </li>
                 <li>
                   <% if !current_user %>
-                    <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#signup-modal">註冊</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
                   <% else %>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                          Hi!, <%= current_user.email %>
+                          您好，用戶 <%= current_user.email %>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
                            <% if current_user.admin? %>
                              <li>
-                               <%= link_to("Admin 選單", admin_products_path ) %>
+                               <!-- <span class="glyphicon glyphicon-user" aria-hidden="true"> -->
+                                 <%= link_to("Admin選單", admin_products_path ) %>
+                               <!-- </span> -->
                              </li>
                            <% end %>
                            <li>

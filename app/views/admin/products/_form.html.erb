@@ -1,0 +1,17 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :quantity %>
+  <%= f.input :price %>
+  <%= f.input :series, :collection => ["星之卡比", "魔物獵人", "任天堂明星大亂鬥", "超級瑪利歐", "斯普拉遁", "薩爾達傳說", "動物森友會"], :selected => "星之卡比
+  " %>
+
+  <% if @product.image.present? %>
+    <span>目前商品圖</span> <br>
+    <%= image_tag(@product.image.thumb.url) %>
+  <% end %>
+
+  <%= f.input :image, as: :file %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
