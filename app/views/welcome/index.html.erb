@@ -1,1 +1,201 @@
-<h1> Hello World! </h1>
+<!-- <div class="row">
+  <center> -->
+    <!-- <h1> Nice Website Practice </h1> -->
+
+  <!-- youtube影片 -->
+    <!-- <div class="embed-responsive embed-responsive-16by9">
+      <iframe src="https://www.youtube.com/embed/dAB4zlf0COE" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </center> -->
+
+  <!-- 大圖一 -->
+  <!-- <div class="photo1">
+    <h1 class="title">Nice Website Practice</h1>
+    <p class="title">Nice Website Practice 是一個購物網站
+    <br>
+    我希望藉由這個專案，練習寫網站的基礎
+    <br>
+    憑藉練習和筆記讓自己更熟練
+    </p>
+    <p class="lead"><a class="btn btn-lg btn-danger" href="/products">商品頁面</a></p>’
+  </div> -->
+
+  <!-- 大圖二 -->
+  <!-- <div class="photo2">
+    <h1 align="center" class="title2">練習格式</h1>
+  </div>
+</div> -->
+
+
+<!-- 插入 youtube 連結 -->
+   <!-- <div class="embed-responsive embed-responsive-16by9">
+     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dAB4zlf0COE" allowfullscreen></iframe>
+   </div> -->
+
+ <div class="row"> <!--讓背景左右到底-->
+
+   <!-- 首頁 -->
+   <section id="home" class="sec-main">
+       <h1 class="main-heading">找到屬於你的amiibo公仔！</h1>
+   </section>
+
+
+   <section id="about" class="sec-about">
+     <div class="container">
+       <h1>關於 amiibo公仔</h1>
+       <hr>
+
+       <div class="row">
+         <div class="col-sm-6 col-sm-offset-3">
+           <p>希望熱愛任天堂的夥伴們人手都擁有amiibo公仔！<br>
+             不了解的人也能透過amiibo來了解任天堂遊戲的魅力！
+         </div>
+       </div>
+     </div>
+   </section>
+   <section id="services" class="sec-services">
+     <div class="container">
+       <h1>功能</h1>
+
+       <hr />
+<div class="row">
+         <div class="col-sm-4">
+           <i class="fa fa-4x fa fa-check"></i>
+
+           <h2 class="h3">點觸以連繫各式各樣遊戲</h2>
+
+           <p>將amiibo點觸主機進行連動後，amiibo或許會作為角色在遊戲中登場，
+             又或是能獲取特別的道具等。1個amiibo能連繫遊戲中各式各樣的遊玩方式</p>
+         </div>
+
+         <div class="col-sm-4">
+           <i class="fa fa-4x fa fa-user-o"></i>
+
+           <h2 class="h3">角色在遊戲中登場</h2>
+
+           <p>例如在《Splatoon™ 2》<br>
+           amiibo會作為「支持者」在遊戲中以你喜愛的打扮登場並提供協助，也能一起拍攝紀念照片</p>
+         </div>
+
+         <div class="col-sm-4">
+           <i class="fa fa-4x fa fa-birthday-cake"></i>
+
+           <h2 class="h3">獲得角色的道具或能力</h2>
+
+           <p>例如在《薩爾達傳說 曠野之息》<br>
+             能獲得角色的道具</p>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <section id="categories">
+         <div class="container">
+             <h1>分類</h1>
+
+       <hr>
+             <div class="row">
+                 <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_all.png") %>
+                   <div class="caption">
+               <h4><%= link_to("總覽", products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+<div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_kirby.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("星之卡比", kirby_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_monster.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("魔物獵人", monster_hunter_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+
+                 <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_smash.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("任天堂明星大亂鬥", super_smash_bros_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="row">
+                 <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                   <%= image_tag("amiibo_mario.png") %>
+                   <div class="caption">
+                     <h4><%= link_to("超級瑪利歐", super_mario_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+<div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_splatoon.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("斯普拉遁", splatoon_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_zelda.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("薩爾達傳說 曠野之息", zelda_botw_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+
+                 <div class="col-sm-6 col-md-3">
+                 <div class="thumbnail">
+                   <%= image_tag("amiibo_animal_crossing.webp") %>
+                   <div class="caption">
+                     <h4><%= link_to("動物森友會", animal_crossing_products_path(:order => "by_recent")) %></h4>
+                   </div>
+                 </div>
+               </div>
+             </div>
+         </div>
+
+     </section>
+
+
+   <section id="testimonials" class="sec-testimonials">
+     <div class="container">
+       <h1>各界好評</h1>
+
+       <hr>
+
+       <div class="row">
+         <div class="col-sm-4">
+           <p class="text-center">"網站商品豐富，價格合理！"</p>
+
+           <p class="text-right">&mdash; 佐藤</p>
+         </div>
+
+         <div class="col-sm-4">
+           <p class="text-center">這邊有滿滿的任天堂amiibo！</p>
+
+           <p class="text-right">&mdash; 村上</p>
+         </div>
+
+         <div class="col-sm-4">
+           <p class="text-center">"網站排版簡潔易懂！"</p>
+
+           <p class="text-right">&mdash; 玩家A</p>
+         </div>
+       </div>
+     </div>
+   </section>
+</div>

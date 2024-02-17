@@ -26,7 +26,7 @@
     </table>
     <div class="total clearfix">
       <span class="pull-right">
-        總計 <%= @order.total %> NTD
+        總計 <%= @order.total %> 元
       </span>
     </div>
 
@@ -61,7 +61,7 @@
 
        <div class="pull-left">
          <% if @order.order_placed? || @order.paid? %>
-           <%= link_to("申请取消订单", apply_to_cancel_order_path(@order.token), method: :post, class: "btn  btn-info") %>
+           <%= link_to("申请取消訂單", apply_to_cancel_order_path(@order.token), method: :post, class: "btn  btn-info") %>
          <% end %>
        </div>
 

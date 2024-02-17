@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-  root 'products#index'
+  root 'welcome#index'
 
   #設定 admin/products 的路徑(routes)
   namespace :admin do
@@ -18,6 +18,17 @@ Rails.application.routes.draw do
   end
 
   resources :products do
+    #建立多個分類網頁
+    collection do
+      get :kirby
+      get :monster_hunter
+      get :super_smash_bros
+      get :super_mario
+      get :splatoon
+      get :zelda_botw
+      get :animal_crossing
+    end
+
     member do
       post :add_to_cart
     end
